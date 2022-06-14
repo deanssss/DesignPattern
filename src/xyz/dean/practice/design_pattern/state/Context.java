@@ -18,4 +18,12 @@ public class Context {
     public void doThat() {
         state.doThat();
     }
+
+    public void printCurrentState() {
+        if (state instanceof ConcreteStateA) {
+            System.out.println("Current state is State A.");
+        } else {
+            System.out.println("Current state is State B.");
+        }
+    }
 }

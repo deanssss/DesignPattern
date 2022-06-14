@@ -3,7 +3,11 @@ package xyz.dean.practice.design_pattern.state;
 public class ConcreteStateB implements State {
     private Context context;
 
-    public ConcreteStateB(Context context) {
+    public ConcreteStateB() {
+    }
+
+    @Override
+    public void setContext(Context context) {
         this.context = context;
     }
 
@@ -15,6 +19,8 @@ public class ConcreteStateB implements State {
     @Override
     public void doThat() {
         System.out.println("do that...");
-        context.changeState(new ConcreteStateA(context));
+        State newState = new ConcreteStateA();
+        newState.setContext(context);
+        context.changeState(newState);
     }
 }
