@@ -4,6 +4,7 @@ public class Context {
     private State state;
 
     public Context(State initialState) {
+        initialState.setContext(this);
         this.state = initialState;
     }
 
