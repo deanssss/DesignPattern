@@ -14,9 +14,7 @@ public class ConcreteStateA implements State {
     @Override
     public void doThis() {
         System.out.println("do this...");
-        State newState = new ConcreteStateB();
-        newState.setContext(context);
-        context.changeState(newState);
+        context.changeState(new ConcreteStateB());
     }
 
     @Override
