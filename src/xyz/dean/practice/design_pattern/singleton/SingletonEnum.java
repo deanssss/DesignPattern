@@ -7,5 +7,5 @@ public enum SingletonEnum {
         System.out.println("new instance");
     }
 
-    public static void hello() {}
+    public void hello() {}
 }
