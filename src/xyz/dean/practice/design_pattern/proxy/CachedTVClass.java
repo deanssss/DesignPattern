@@ -40,5 +40,12 @@ public class CachedTVClass implements ThirdPartyTVLib {
         // 第二次直接返回缓存
         List<String> l2 = proxy.listVideos();
         System.out.println(l2);
+
+        MetricsProxyManager metrics = new MetricsProxyManager();
+        ThirdPartyTVLib metricsProxy = metrics.createProxy(proxy, CachedTVClass.class);
+        List<String> l3 = metricsProxy.listVideos();
+        System.out.println(l3);
+        List<String> l4 = metricsProxy.listVideos();
+        System.out.println(l4);
     }
 }
