@@ -13,7 +13,7 @@ public class Context {
     public void doSomething(int a, int b, char op) {
         Strategy strategy = strategies.get(op);
         if (strategy != null) {
-            System.out.println("Apply strategy with a=" + a + ", b=" + b + ","
+            System.out.println("Apply strategy to a=" + a + ", b=" + b + ","
                     + "and the result is " + strategy.execute(a, b));
         } else {
             System.out.println("No strategy for option '" + op + "'");
