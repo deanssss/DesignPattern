@@ -11,7 +11,7 @@ public class Main {
         context.doThat();
         context.printCurrentState();
         context.doThis();
-        context.doThat();
+        context.doThis();
         context.printCurrentState();
     }
 }
